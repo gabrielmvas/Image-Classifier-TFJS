@@ -56,8 +56,9 @@
             </v-flex>
           </v-layout>
           <hr class="mt-3">
-          <v-layout class="mt-3" row wrap>
+          <v-layout class="mt-3" row wrap v-if="predictions.hasPrediction">
               <v-flex xs12>
+                  <p style="font-size: 30px" class="text-xs-center">Top 3 Predictions</p>
                   <p v-for="(pred, index) in predictions.top3" :key="index">
                       {{ pred.className }} - {{ pred.probability.toFixed(2) + '%' }}
                   </p>
@@ -149,14 +150,16 @@ export default {
       let tensor = this.preprocessImage(image, 'mobilenet');
 
       let prediction = await this.model.predict(tensor).data();
-
+      
+      this.predictions.hasPrediction = true;  
+      
       this.predictions.top3 = Array.from(prediction)
         .map((prob, index) => {
           return {
             probability: prob,
             className: this.imageNetClasses[index]
           };
-          this.predictions.hasPrediction = true;
+          
         })
         .sort((a, b) => b.probability - a.probability)
         .slice(0, 3);
