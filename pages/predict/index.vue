@@ -140,10 +140,9 @@ export default {
         throw new Error("Unknown Model");
       }
     },
-    async loadModel(name) {
+    async loadModel() {
       /* this.model = await tf.loadModel(`http://localhost:3000/vgg16/model.json`) */
       this.model = await tf.loadModel("https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json");
-      console.log("model ready", this.model);
     },
     async predict() {
       let image = this.image.data;
@@ -164,7 +163,7 @@ export default {
     }
   },
   created() {
-    this.loadModel("vgg16");
+    this.loadModel();
   }
 };
 </script>
