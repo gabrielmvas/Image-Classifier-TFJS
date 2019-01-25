@@ -50,7 +50,7 @@
               <v-img style="margin: auto" height="200" width="200" ref="img" :src="image.data"></v-img>
             </v-flex>
             <v-flex class="mt-3" xs6>
-              <v-btn @click="clearImage" outline>Clear Image</v-btn>
+              <v-btn @click="clearImage" outline>Clear</v-btn>
               <p></p>
               <v-btn class="ml-4" @click="predict" outline>Predict</v-btn>
             </v-flex>
@@ -123,22 +123,14 @@ export default {
         .resizeNearestNeighbor([224, 224])
         .toFloat();
 
-      if (modelName == undefined) {
-        return tensor.expandDims();
-      } else if (modelName == "vgg16") {
-        let meanImageNetRGB = tf.tensor1d([123.68, 116.779, 103.939]);
-        return tensor
-          .sub(meanImageNetRGB)
-          .reverse(2)
-          .expandDims();
-      } else if (modelName == "mobilenet") {
-        let offset = tf.scalar(127.5);
-        return tensor
-          .sub(offset)
-          .div(offset)
-          .expandDims();
-      } else {
-        throw new Error("Unknown Model");
+      switch (modelName) {
+        case undefined: return tensor.expandDims()
+        //let meanImageNetRGB = tf.tensor1d([123.68, 116.779, 103.939])
+        case 'vgg16': return tensor.sub( tf.tensor1d([123.68, 116.779, 103.939] )).reverse(2).expandDims()
+        //let offset = tf.scalar(127.5);
+        case 'mobilenet': return tensor.sub(tf.scalar(127.5)).div(tf.scalar(127.5)).expandDims()
+        default: throw new Error("Unknown Model")
+          
       }
     },
     async loadModel() {
