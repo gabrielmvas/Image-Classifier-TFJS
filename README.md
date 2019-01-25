@@ -1,6 +1,6 @@
 # image-classifier
 
-> My dandy Nuxt.js project
+> An image classifier based on the mobilenet model using tensorflowJS
 
 ## Build Setup
 
