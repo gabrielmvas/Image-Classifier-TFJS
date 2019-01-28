@@ -26,10 +26,6 @@
                             click here. 
                         </nuxt-link>
                     </p>
-                    <!-- <p style="font-size: 13px; color: gray">
-                        Soon I will try and updrage this app so users can upload images that were
-                        wrongly classified so I can train a new model with more inputs and more classes.
-                    </p> -->
                 </v-card-text>
             </v-card>
         </v-flex>
