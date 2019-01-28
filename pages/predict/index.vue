@@ -50,9 +50,9 @@
               <v-img style="margin: auto" height="200" width="200" ref="img" :src="image.data"></v-img>
             </v-flex>
             <v-flex class="mt-3" xs6>
-              <v-btn @click="clearImage" outline>Clear</v-btn>
+              <v-btn class="ml-5" @click="clearImage" outline>Clear</v-btn>
               <p></p>
-              <v-btn class="ml-4" @click="predict" outline>Predict</v-btn>
+              <v-btn class="ml-5 mt-5" @click="predict" outline>Predict</v-btn>
             </v-flex>
           </v-layout>
           <hr class="mt-3">
