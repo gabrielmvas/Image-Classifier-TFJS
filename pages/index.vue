@@ -10,7 +10,7 @@
                 <v-divider></v-divider>
                 <v-card-text>
                     <p>
-                        This is an simple web application that uses
+                        This is an simple web application that uses the model
                         MobileNet to classify/make predictions about images.
                     </p>
                     <p>
