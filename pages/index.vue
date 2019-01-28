@@ -20,7 +20,7 @@
                         a wrong prediction.
                     </p>
                     <p>
-                        In case you want to know what classes are there in the model you can 
+                        In case you want to know which classes are in the model you can 
                         click on "Classes" on the toolbar or 
                         <nuxt-link to="/classes" style="color: yellow"> 
                             click here. 
