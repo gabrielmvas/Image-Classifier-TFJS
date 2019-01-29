@@ -6,8 +6,8 @@
             </v-card-title>
             <v-divider></v-divider>
             <v-card-text>
-                <div>Browse some image on your device that you want to classify and you will get the top 3 predictions
-                    the model made.
+                <div>
+                    Browse some image on your device that you want to classify and you will get the top 3 predictions the model made.
                 </div>
                 <hr class="mt-3 mb-3">
                 <v-layout row>
@@ -26,7 +26,12 @@
                     <v-flex xs6 offset-xs3 d-flex>
                         <v-btn style="height: 60px; border-radius: 5px;" @click="pickFile" class="mt-0" outline>
                             <div style="color: white">Browse Image</div>
-                            <input type="file" id="file-selector" style="display: none" ref="picker" @change="previewImage"
+                            <input 
+                                type="file" 
+                                id="file-selector" 
+                                style="display: none" 
+                                ref="picker" 
+                                @change="previewImage"
                                 accept="image/*">
                         </v-btn>
                     </v-flex>
@@ -34,7 +39,13 @@
                 <hr class="mb-3 mt-2" v-if="image.isUploaded">
                 <v-layout row wrap v-if="image.isUploaded">
                     <v-flex xs6>
-                        <v-img style="margin: auto" height="200" width="200" ref="img" :src="image.data"></v-img>
+                        <v-img 
+                            style="margin: auto" 
+                            height="200" 
+                            width="200" 
+                            ref="img" 
+                            :src="image.data"
+                        ></v-img>
                     </v-flex>
                     <v-flex class="mt-3" xs6>
                         <v-btn class="ml-5" @click="clearImage" outline>Clear</v-btn>
@@ -45,7 +56,9 @@
                 <hr class="mt-3">
                 <v-layout class="mt-3" row wrap v-if="predictions.hasPrediction">
                     <v-flex xs12>
-                        <div style="font-size: 30px" class="text-xs-center mt-3">Top 3 Predictions</div>
+                        <div style="font-size: 30px" class="text-xs-center mt-3">
+                            Top 3 Predictions
+                        </div>
                         <div class="mt-3" v-for="(pred, index) in predictions.top3" :key="index">
                             {{ pred.className }} - {{ pred.probability.toFixed(2) + '%' }}
                         </div>
