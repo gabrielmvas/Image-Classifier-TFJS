@@ -1024,9 +1024,9 @@ const IMAGENET_CLASSES = {
 
 const allClasses = Object.values(IMAGENET_CLASSES)
 
-let all = []
+let classes = []
 for (let c of allClasses) {
-    all.push(c.charAt(0).toUpperCase() + c.slice(1).toLowerCase())
+    classes.push(c.charAt(0).toUpperCase() + c.slice(1).toLowerCase())
 }
 
-export { all }
+export { classes }

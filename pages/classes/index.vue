@@ -25,12 +25,12 @@
 </template>
 
 <script>
-import { all } from '@/service/utils'
+import { classes } from '@/service/classes'
 
 export default {
     data() {
         return {
-            allClasses: all
+            allClasses: classes
         }
     }
 }

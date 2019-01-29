@@ -71,7 +71,7 @@
 
 <script>
 import * as tf from "@tensorflow/tfjs";
-import { all } from "@/service/utils";
+import { classes } from "@/service/classes";
 
 export default {
   data() {
@@ -85,7 +85,7 @@ export default {
         data: ""
       },
       model: null,
-      imageNetClasses: all,
+      imageNetClasses: classes,
       predictions: {
         top3: [],
         hasPrediction: false
