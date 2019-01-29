@@ -10,8 +10,7 @@
                 <v-divider></v-divider>
                 <v-card-text>
                     <p>
-                        Link to my github where you will have access
-                        to the source code of this project.
+                        Link to my github where you will have access to the source code of this project.
                     </p>
                     <div class="text-xs-center" >
                         <v-tooltip bottom>

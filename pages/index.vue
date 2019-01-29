@@ -9,18 +9,15 @@
                 </v-card-title>
                 <v-divider></v-divider>
                 <v-card-text>
-                    <p>
+                    <div>
                         This is an simple web application that uses the modelMobileNet to classify/make predictions about images.
-                    </p>
-                    <p>
+                    </div>
+                    <div class="mt-2">
                         Please note that this model have been trained to classify one thousand specific classes, so do not expect very high accuracy for whatever input, you can input images the model does not recognize, so probably you will get a wrong prediction.
-                    </p>
-                    <p>
-                        In case you want to know which classes are in the model you can click on "Classes" on the toolbar or 
-                        <nuxt-link to="/classes" style="color: yellow"> 
-                            click here. 
-                        </nuxt-link>
-                    </p>
+                    </div>
+                    <div class="mt-2">
+                        In case you want to know which classes are in the model you can click on "Classes" on the toolbar or  <nuxt-link to="/classes" style="color: yellow"> click here. </nuxt-link>
+                    </div>
                 </v-card-text>
             </v-card>
         </v-flex>

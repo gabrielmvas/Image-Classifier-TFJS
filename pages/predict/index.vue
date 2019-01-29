@@ -1,17 +1,16 @@
 <template>
   <v-layout row wrap>
-    <v-flex xs12 sm6 offset-sm3>
+    <v-flex xs12 sm8 offset-sm2>
       <v-card class="mt-5" style="border-radius: 15px">
         <v-card-title>
           <span class="card-title">Predict</span>
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text>
-          <p>
-            Browse some image on your device that you want to classify and you will get
-            the top 3 predictions the model made.
-          </p>
-          <hr class="mb-3">
+          <div>
+            Browse some image on your device that you want to classify and you will get the top 3 predictions the model made.
+          </div>
+          <hr class="mt-3 mb-3">
           <v-layout row>
             <!-- <v-flex xs6 d-flex>
               <v-select
