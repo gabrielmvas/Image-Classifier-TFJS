@@ -3,25 +3,20 @@
         <v-flex xs12 sm8 offset-sm2>
             <v-card style="border-radius: 15px" class="mt-5">
                 <v-card-title>
-                    <span class="card-title">
-                        Git Hub Repository
-                    </span>
+                    <span class="card-title">Git Hub Repository</span>
                 </v-card-title>
                 <v-divider></v-divider>
                 <v-card-text>
-                    <p>
-                        Link to my github where you will have access to the source code of this project.
-                    </p>
-                    <div class="text-xs-center" >
+                    <p>Link to my github where you will have access to the source code of this project.</p>
+                    <div class="text-xs-center">
                         <v-tooltip bottom>
                             <v-btn slot="activator" fab @click="goToGit">
                                 <v-icon>code</v-icon>
-                                <a 
-                                    ref="gitRep" 
+                                <a
+                                    ref="gitRep"
                                     href="https://github.com/gabrielmvas/Image-Classifier-TFJS"
                                     target="_blank"
-                                >
-                                </a>
+                                ></a>
                             </v-btn>
                             <span>GitHub</span>
                         </v-tooltip>
@@ -36,16 +31,16 @@
 export default {
     methods: {
         goToGit() {
-            this.$refs.gitRep.click()
+            this.$refs.gitRep.click();
         }
     }
-}
+};
 </script>
 
 <style>
 .card-title {
     margin: auto;
-    font-weight: bold; 
+    font-weight: bold;
     font-size: 30px;
 }
 </style>
