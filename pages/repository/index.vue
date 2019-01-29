@@ -1,7 +1,7 @@
 <template>
     <v-layout row wrap>
         <v-flex xs12 sm6 offset-sm3>
-            <v-card class="mt-5">
+            <v-card style="border-radius: 15px" class="mt-5">
                 <v-card-title>
                     <span class="card-title">
                         Git Hub Repository
