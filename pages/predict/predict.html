@@ -2,7 +2,7 @@
     <v-flex xs12 sm8 offset-sm2>
         <v-card class="mt-5" style="border-radius: 15px">
             <v-card-title>
-                <span class="card-title">Predict</span>
+                <div class="card-title">Predict</div>
             </v-card-title>
             <v-divider></v-divider>
             <v-card-text>
@@ -25,7 +25,7 @@
                         </v-flex>-->
                     <v-flex xs6 offset-xs3 d-flex>
                         <v-btn style="height: 60px; border-radius: 5px;" @click="pickFile" class="mt-0" outline>
-                            <span style="color: white">Browse Image</span>
+                            <div style="color: white">Browse Image</div>
                             <input type="file" id="file-selector" style="display: none" ref="picker" @change="previewImage"
                                 accept="image/*">
                         </v-btn>

@@ -1,5 +1,5 @@
 <template>
     <v-footer app>
-        <span style="margin: auto">Image Classifier &copy; 2019</span>
+        <div style="margin: auto">Image Classifier &copy; 2019</div>
     </v-footer>
 </template>

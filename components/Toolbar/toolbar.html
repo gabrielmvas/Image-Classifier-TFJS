@@ -1,11 +1,18 @@
 <v-toolbar>
     <v-toolbar-title>
         <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="toggleDrawer"></v-toolbar-side-icon>
-        <span class="hidden-sm-and-down">Image Classifier</span>
+        <div class="hidden-sm-and-down">Image Classifier</div>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn v-for="button in buttons" :key="button.title" flat :to="button.path" class="mr-0 ml-0">{{ button.title
-            }}</v-btn>
+        <v-btn 
+            v-for="button in buttons" 
+            :key="button.title" 
+            flat 
+            :to="button.path" 
+            class="mr-0 ml-0"
+        >
+            {{ button.title}}
+        </v-btn>
     </v-toolbar-items>
 </v-toolbar>

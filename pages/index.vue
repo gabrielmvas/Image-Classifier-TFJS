@@ -3,7 +3,7 @@
         <v-flex xs12 sm8 offset-sm2>
             <v-card class="mt-5" style="border-radius: 15px">
                 <v-card-title>
-                    <span class="card-title">Image Classifier</span>
+                    <div class="card-title">Image Classifier</div>
                 </v-card-title>
                 <v-divider></v-divider>
                 <v-card-text>
