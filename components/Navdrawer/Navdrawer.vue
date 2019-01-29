@@ -1,11 +1,15 @@
 <template>
-
-    <v-navigation-drawer v-if="navdrawerVisibility" app fixed :clipped="$vuetify.breakpoint.xlAndUp" v-model="isVisible">
+    <v-navigation-drawer 
+        v-if="navdrawerVisibility" 
+        app 
+        fixed 
+        :clipped="$vuetify.breakpoint.xlAndUp" 
+        v-model="isVisible"
+    >
         <v-list>
             <template v-for="item in menuItems">
                 <v-list-tile :to="item.path" :key="item.title">
                     <v-list-tile-content>
-                        <!-- <v-list-tile-title style="color: #1565C0; font-size: 18px"> -->
                         <v-list-tile-title>
                             {{ item.title }}
                         </v-list-tile-title>
@@ -14,8 +18,7 @@
             </template>
         </v-list>
     </v-navigation-drawer>
-
-    </template>
+</template>
 
 <script>
 export default {

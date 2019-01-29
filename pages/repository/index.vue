@@ -1,6 +1,6 @@
 <template>
     <v-layout row wrap>
-        <v-flex xs12 sm6 offset-sm3>
+        <v-flex xs12 sm8 offset-sm2>
             <v-card style="border-radius: 15px" class="mt-5">
                 <v-card-title>
                     <span class="card-title">
